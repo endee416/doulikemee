@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >body {background-image:url({% static 'Saved pictures/pexels-jess-bailey-designs-983828.jpg' %}); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
+</head>
+<body style="background-color:wheat;">
+    
+    <form method="POST">
+        {% csrf_token %}
+        <h3>What is Dee's full name</h3>
+        <input type='text'  name='deename' placeholder= "enter name here" id='name' >
+        <h3>Dee's birthday</h3>
+        <select name="day">
+            <optgroup label='day'  >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+
+            </optgroup>
+
+        
+        </select>
+        
+        <select name="month">
+            <optgroup label='month' >
+                <option value="jan">jan</option>
+                <option value="feb">feb</option>
+                <option value="march">mar</option>
+                <option value="april">april</option>
+                <option value="may">may</option>
+                <option value="june">june</option>
+                <option value="july">july</option>
+                <option value="august">aug</option>
+                <option value="september">sep</option>
+                <option value="october">oct</option>
+                <option value="november">nov</option>
+                <option value="december">dec </option>
+            </optgroup>
+        
+        </select>
+        <br><br><h3>Relationship status</h3>
+        <input type='radio' required name='rstatus' value='single'>single
+        <input type='radio' name='rstatus' value='taken'>taken
+        <br><br><h3>Department</h3>
+        <input type='text' name="dept" placeholder="Enter dept here">
+        
+        <br><br><h3>Favorite meal</h3>
+        <input type='text' name="fmeal" placeholder="Enter meal here">
+        
+        <br><br><h3>How many siblings do i have?</h3>
+        <input type='text' name="siblings" placeholder="????????">
+
+        
+        
+        <br><br><h3>My favorite tv show?</h3>
+        <input type='text' name="tvshow" placeholder="????????">
+        
+        
+        <br><br><h3>My hometown</h3>
+        <input type='text' name="hometown" placeholder="????????">
+
+        
+        
+        <br><br><h3>Where did i have my primary education?</h3>
+        <input type='text' name="priedu" placeholder="????????">
+        
+        
+        <br><br><h3>Where did i have my secondary education?</h3>
+        <input type='text' name="secedu" placeholder="????????">
+        <br><br><br><input type="submit" value="nextpage">
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>

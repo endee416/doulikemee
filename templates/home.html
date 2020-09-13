@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >body {background-image:url({% static 'Saved pictures/pexels-karolina-grabowska-4194842.jpg' %}); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
+</head>
+<body style='background-color:wheat'>
+
+<form class="post-form"  method="POST"  enctype="multipart/form-data" id="my class" name="ha" >
+    {% csrf_token %}
+    {% for part in parts %}
+    
+  <h3>{{part.question}}</h3>
+        
+   <br> <input type="radio"  name="{{part.name}}" value="{{part.option1}}">{{part.option1}}
+   <br> <input type="radio"  name= '{{part.name}}' value="{{part.option2}}">{{part.option2}}
+    <br><input type="radio" name="{{part.name}}" value="{{part.option3}}">{{part.option3}}
+    <br><input type="radio"  name='{{part.name}}' value="{{part.option4}}">{{part.option4}}
+    {{forms.NUMS}}
+    
+    {% endfor %}
+
+    <br><br><input type='submit' value='nextpage'>
+    
+
+    </form>
+
+    
+
+
+    
+        
+    
+
+    
+    
+</body>
+</html>

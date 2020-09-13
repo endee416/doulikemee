@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >body {background-image:url({% static 'Saved pictures/pexels-stas-knop-3760323.jpg' %}); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
+</head>
+<body style="background-color: wheat;">
+    <h3>Who exactly are you reporting to?...God?</h3>
+    <br><br><h4>please go back and click submit</h4>
+
+    <form method="POST">
+        {% csrf_token %}
+       <br><br> <input type="submit" value="Go back">
+    </form>
+</body>
+</html>

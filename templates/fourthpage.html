@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >body {background-image:url({% static 'Saved pictures/pexels-lumn-399161.jpg' %}); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
+</head>
+<body style="background-color:wheat">
+
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <h3>Enter your name</h3>
+    <br><input type='text' name="clientname" placeholder="Enter your name here" >
+    <br><br><h3>Upload any image we took together and earn 2 extra points(upload yours if none)</h3>
+    <input type="file" placeholder="Enter image here"  required value="image" name="clientimage">
+    <br><br><br><br><input type="submit">
+    
+
+    </form>
+    
+        <br><br><h3><i>If you feel this website abused you in anyway, please <a href='report'>Report</a></i></h3>
+    
+    
+</body>
+</html>

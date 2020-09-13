@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >body {background-image:url({% static 'Saved pictures/pexels-buenosia-carol-707582.jpg' %}); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
+</head>
+<body style="background-color:wheat">
+
+    <form method="POST">
+        {% csrf_token %}
+    
+    <br><br><h3>Do i like sports?</h3>
+    <input type='radio' required name="sports" value="yessports">yes
+    <input type='radio' name="sports" value="nosports">no
+    
+    
+    <br><br><h3>Any hobbies?</h3>
+    <br><input type='text' name="hobby1" placeholder="firsthobby">
+    <br><input type='text' name= 'hobby2' placeholder="secondhobby">
+    <br><input type='text' name="hobby3" placeholder="thirdhobby">
+    
+    <br><br><h3>Which church do i attend?</h3>
+    <input type='text' name='church' placeholder="????????">
+
+    
+    <br><br><h3>Am i an anime fan?</h3>
+    <input type='text' name="anime" placeholder="????????">
+    
+    <br><br><h3>If yes, which is my favorite?</h3>
+    <input type='text' name="favanime" placeholder="????????">
+    
+    <br><br><h3>Whats my personality like(you can mark more than one option)</h3>
+    <br><input type="checkbox" name="personality" value='narcissistic' >narcissistic
+    <br><input type="checkbox" name="personality" value='humble'>humble
+    <br><input type="checkbox" name="personality" value='shy' >shy
+    <br><input type="checkbox" name='personality' value='funny'>funny
+    <br><input type="checkbox" name='personality' value='crazy'>crazy
+    <br><br><h4><i>Add any other personality traits in the boxes below</i></h4>
+    <br><input type='text' name="personalitytrait1" placeholder='personalitytrait1' placeholder="...">
+    <br><input type='text' name="personalitytrait2" placeholder='personalitytrait2' placeholder="...">
+    <br><input type='text' name='personalitytrait3' placeholder='personalitytrait3' placeholder="...">
+    <br><br><input type='submit' value='nextpage'>
+
+    </form>
+
+
+
+</body>
+</html>
