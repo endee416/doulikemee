@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'questionairree.herokuapp.com']
 # Application definition
 
 
+
 INSTALLED_APPS = [
     'like.apps.LikeConfig',
     'django.contrib.admin',
