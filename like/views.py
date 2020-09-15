@@ -8,7 +8,7 @@ from django.views.decorators.cache import cache_control
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def actualhome(request):
     return render(request, 'actualhome.html')
 
@@ -52,7 +52,7 @@ names=['gender1','gender2','gender3','gender4']
 
 
 allparts=[part1, part2, part3, part4]
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def home(request):
     if request.method=='POST':
                     
@@ -70,7 +70,7 @@ def home(request):
 
     else:
         return render(request, "home.html", {'parts': allparts})
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def secondpage(request):
     if request.method=='POST':
                 
@@ -97,7 +97,7 @@ def secondpage(request):
         return redirect('thirdpage')
     else:
         return render(request, 'secondpage.html')
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def thirdpage(request):
     if request.method=='POST':
         global question15
@@ -117,7 +117,7 @@ def thirdpage(request):
         return redirect('fourthpage')
     else:
         return render(request, 'thirdpage.html')
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def fourthpage(request):
     if request.method=='POST' and request.FILES['clientimage']:
         clientimage=request.FILES['clientimage']
@@ -135,7 +135,6 @@ def fourthpage(request):
     else:
         return render(request, 'fourthpage.html')
 
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def fifthpage(request):
     if request.method=='POST':
         auth.logout(request)
@@ -148,7 +147,7 @@ def fifthpage(request):
 
 
 
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def login(request):
     
     if request.method=='POST':
@@ -166,14 +165,14 @@ def login(request):
 
     else:
         return render(request, 'login.html')
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def report(request):
     
     if request.method=='POST':
         return redirect('fourthpage')
     else:
         return render(request, 'report.html')
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+
 def hello(request):
     return render(request, 'helo.html')
 
