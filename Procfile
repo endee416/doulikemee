@@ -1,1 +1,1 @@
-web: gunicorn doulikeme --log-file -
+web: gunicorn doulikeme.wsgi
