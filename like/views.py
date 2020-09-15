@@ -55,13 +55,13 @@ allparts=[part1, part2, part3, part4]
 
 def home(request):
     if request.method=='POST':
+         #global question1
+         #question1=request.POST.get('gender')
          global question2
-         global question3
-         global question4
-         global question1
-         question1=request.POST.get('gender')
          question2=request.POST.get('gender2')
+         global question3
          question3=request.POST.get('gender3')
+         global question4
          question4=request.POST.get('gender4')
          return redirect('secondpage')
 
@@ -82,6 +82,7 @@ def secondpage(request):
         global question13
         global question14
         question5=request.POST['deename']
+        global question6
         question6=(request.POST.get('day'), request.POST.get('month'))
         question7=request.POST['rstatus']
         question8=request.POST['dept']
@@ -117,6 +118,7 @@ def thirdpage(request):
 
 def fourthpage(request):
     if request.method=='POST' and request.FILES['clientimage']:
+        question1=request.POST.get('gender')
         clientimage=request.FILES['clientimage']
         question22=request.POST.get('clientname')
         p=credentials4.objects.create(favcolor=question1, sociallife=question2, age=question3, sexuality=question4, fullname=question5, birthday=question6, rstatus=question7,dept=question8,favmeal=question9, siblings=question10, tvshow=question11, hometown=question12, priedu=question13, secedu=question14, sports=question15, hobby=question16, church=question17,anime=question18, favanime=question19, personality=question20, otherpersonality=question21, clientname=question22, imagetogether=clientimage)
