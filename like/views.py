@@ -55,10 +55,10 @@ allparts=[part1, part2, part3, part4]
 
 def home(request):
     if request.method=='POST':
-         global question1
          global question2
          global question3
          global question4
+         global question1
          question1=request.POST.get('gender')
          question2=request.POST.get('gender2')
          question3=request.POST.get('gender3')
