@@ -123,7 +123,7 @@ def fourthpage(request):
         clientimage=request.FILES['clientimage']
         #fs=FileSystemStorage()
         #filename=fs.save(clientimage.name, clientimage)
-        theurl=fs.url(filename)
+        #theurl=fs.url(filename)
         question22=request.POST.get('clientname')
         p=credentials4.objects.create(favcolor=question1, sociallife=question2, age=question3, sexuality=question4, fullname=question5, birthday=question6, rstatus=question7,dept=question8,favmeal=question9, siblings=question10, tvshow=question11, hometown=question12, priedu=question13, secedu=question14, sports=question15, hobby=question16, church=question17,anime=question18, favanime=question19, personality=question20, otherpersonality=question21, clientname=question22, imagetogether=clientimage)
         p.save()
