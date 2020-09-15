@@ -55,8 +55,8 @@ allparts=[part1, part2, part3, part4]
 
 def home(request):
     if request.method=='POST':
-         #global question1
-         #question1=request.POST.get('gender')
+         global question1
+         question1=request.POST.get('gender')
          global question2
          question2=request.POST.get('gender2')
          global question3
@@ -72,25 +72,24 @@ def home(request):
 def secondpage(request):
     if request.method=='POST':
         global question5
-        global question6
-        global question7
-        global question8
-        global question9
-        global question10
-        global question11
-        global question12
-        global question13
-        global question14
         question5=request.POST['deename']
         global question6
         question6=(request.POST.get('day'), request.POST.get('month'))
+        global question7
         question7=request.POST['rstatus']
+        global question8
         question8=request.POST['dept']
+        global question9
         question9=request.POST['fmeal']
+        global question10
         question10=request.POST['siblings']
+        global question11
         question11=request.POST['tvshow']
+        global question12
         question12=request.POST['hometown']
+        global question13
         question13=request.POST['priedu']
+        global question14
         question14=request.POST['secedu']
         return redirect('thirdpage')
     else:
@@ -118,7 +117,6 @@ def thirdpage(request):
 
 def fourthpage(request):
     if request.method=='POST' and request.FILES['clientimage']:
-        question1=request.POST.get('gender')
         clientimage=request.FILES['clientimage']
         question22=request.POST.get('clientname')
         p=credentials4.objects.create(favcolor=question1, sociallife=question2, age=question3, sexuality=question4, fullname=question5, birthday=question6, rstatus=question7,dept=question8,favmeal=question9, siblings=question10, tvshow=question11, hometown=question12, priedu=question13, secedu=question14, sports=question15, hobby=question16, church=question17,anime=question18, favanime=question19, personality=question20, otherpersonality=question21, clientname=question22, imagetogether=clientimage)
