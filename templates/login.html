@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style >body {background-image:url({% static 'Saved pictures/pexels-fwstudio-129731.jpg' %}); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
+    <style >body {background-image:url('/static/Saved pictures/pexels-fwstudio-129731.jpg'); background-attachment: fixed;background-size: cover; background-repeat: no-repeat;}</style>
 </head>
-<body>
+<body style='background-color:wheat'>
     <form  method="POST">
         {% csrf_token %}
     

@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '$7+^eo&2qzmod)g2ao^&zv9u2e$0t79*z1@_h9t@_q@6hync24'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'questionn.herokuapp.com']
 
@@ -52,13 +52,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'doulikeme.urls'
@@ -135,8 +135,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR, 'static')
-]
+    os.path.join(BASE_DIR, 'static')]
+
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL='/media/'
