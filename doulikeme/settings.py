@@ -33,7 +33,7 @@ SECRET_KEY = '$7+^eo&2qzmod)g2ao^&zv9u2e$0t79*z1@_h9t@_q@6hync24'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'questionn.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'git.heroku.com/fast-tundra-42821.git']
 
 
 # Application definition
