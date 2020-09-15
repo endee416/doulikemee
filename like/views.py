@@ -71,7 +71,6 @@ def home(request):
 
 def secondpage(request):
     if request.method=='POST':
-                
         global question5
         global question6
         global question7
