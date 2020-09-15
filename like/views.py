@@ -98,18 +98,18 @@ def secondpage(request):
 def thirdpage(request):
     if request.method=='POST':
         global question15
-        global question16
-        global question17
-        global question18
-        global question19
-        global question20
-        global question21
         question15=request.POST['sports']
+        global question16
         question16=(request.POST.get('hobby1'), request.POST.get('hobby2'), request.POST.get('hobby3'))
+        global question17
         question17=request.POST['church']
+        global question18
         question18=request.POST['anime']
+        global question19
         question19=request.POST['favanime']
+        global question20
         question20=request.POST.getlist('personality')
+        global question21
         question21=(request.POST.get('personalitytrait1'), request.POST.get('personalitytrait2'), request.POST.get('personalitytrait3'))
         return redirect('fourthpage')
     else:
