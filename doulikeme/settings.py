@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'doulikeme.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'questions',
-        'USER':'postgres',
-        'PASSWORD': '12345',
-        'HOST':'localhost',
+        'NAME': 'd2gh2075ta70an',
+        'USER':'nywbzwxzioqqdi',
+        'PASSWORD': '5f286d6f5c1ffe0213c53623df441e00148db655fa79e61130350611fcf844dc',
+        'HOST':'ec2-54-204-26-236.compute-1.amazonaws.com',
         'PORT':'5432'
     }
 }
